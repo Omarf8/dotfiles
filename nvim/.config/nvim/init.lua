@@ -12,6 +12,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {}
-
 require("vim-options")
 require("lazy").setup("plugins")
+
+vim.lsp.config('lua_ls', {
+    cmd = { 'lua-language-server' },
+    root_markers = { '.git', '.luarc.json' },
+    filetypes = { 'lua' },
+})
+vim.lsp.enable({ 'lua_ls' })
