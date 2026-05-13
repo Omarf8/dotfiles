@@ -16,13 +16,11 @@ require("vim-options")
 require("lazy").setup("plugins")
 
 vim.lsp.config('lua_ls', {
-	cmd = { 'lua-language-server' },
 	root_markers = { '.git', '.luarc.json' },
 	filetypes = { 'lua' },
 })
 
 vim.lsp.config('clangd', {
-	cmd = { 'clangd' },
 	filetypes = { 'c', 'cpp' },
 	root_markers = { '.git', 'compile_commands.json', 'CMakeLists.txt', 'Makefile' }
 })
