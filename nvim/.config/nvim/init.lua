@@ -22,6 +22,7 @@ vim.lsp.config('lua_ls', {
 })
 
 vim.lsp.config('clangd', {
+	cmd = { 'clangd' },
 	filetypes = { 'c', 'cpp' },
 	root_markers = { '.git', 'compile_commands.json', 'CMakeLists.txt', 'Makefile' }
 })
