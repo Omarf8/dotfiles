@@ -15,14 +15,34 @@ local opts = {}
 require("vim-options")
 require("lazy").setup("plugins")
 
+-- Lua
 vim.lsp.config('lua_ls', {
-	root_markers = { '.git', '.luarc.json' },
 	filetypes = { 'lua' },
+	root_markers = { '.git', '.luarc.json' },
 })
 
+-- C/C++
 vim.lsp.config('clangd', {
 	filetypes = { 'c', 'cpp' },
-	root_markers = { '.git', 'compile_commands.json', 'CMakeLists.txt', 'Makefile' }
+	root_markers = { '.git', 'compile_commands.json', 'CMakeLists.txt', 'Makefile' },
 })
 
-vim.lsp.enable({ 'lua_ls', 'clangd' })
+-- JavaScript / TypeScript
+vim.lsp.config('ts_ls', {
+    filetypes = { 'javascript', 'typescript', 'javascriptreact', 'typescriptreact' },
+    root_markers = { '.git', 'package.json' },
+})
+
+-- HTML
+vim.lsp.config('html', {
+    filetypes = { 'html' },
+    root_markers = { '.git', 'package.json' },
+})
+
+-- CSS
+vim.lsp.config('cssls', {
+    filetypes = { 'css', 'scss' },
+    root_markers = { '.git', 'package.json' },
+})
+
+vim.lsp.enable({ 'lua_ls', 'clangd', 'ts_ls', 'html', 'cssls' })
