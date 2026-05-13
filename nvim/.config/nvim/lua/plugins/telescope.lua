@@ -1,4 +1,4 @@
-return	{ -- Telescope File Search
+return { -- Telescope File Search
 	'nvim-telescope/telescope.nvim', 
 	version = '*',
 	dependencies = {

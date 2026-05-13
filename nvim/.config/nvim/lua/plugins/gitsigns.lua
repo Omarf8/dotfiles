@@ -1,4 +1,4 @@
 return { -- Git UI
-	"lewis6991/gitsigns.nvim", 
+	"lewis6991/gitsigns.nvim",
 	opts = {}
 }

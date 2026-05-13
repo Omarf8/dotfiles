@@ -1,4 +1,4 @@
-return	{ -- Color Theme   
+return { -- Color Theme   
 	"catppuccin/nvim", 
 	name = "catppuccin", 
 	priority = 1000,
