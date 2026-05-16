@@ -13,7 +13,7 @@ return { -- Language Server Protocol
 		},
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "clangd", "ts_ls", "html", "cssls" }
+				ensure_installed = { "lua_ls", "clangd", "pyright", "ts_ls", "html", "cssls" }
 			})
 
 			vim.api.nvim_create_autocmd('LspAttach', {

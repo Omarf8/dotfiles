@@ -27,22 +27,28 @@ vim.lsp.config('clangd', {
 	root_markers = { '.git', 'compile_commands.json', 'CMakeLists.txt', 'Makefile' },
 })
 
+-- Python
+vim.lsp.config('pyright', {
+	filetypes = { 'python' },
+	root_markers = { '.git', 'requirements.txt' },
+})
+
 -- JavaScript / TypeScript
 vim.lsp.config('ts_ls', {
-    filetypes = { 'javascript', 'typescript', 'javascriptreact', 'typescriptreact' },
-    root_markers = { '.git', 'package.json' },
+	filetypes = { 'javascript', 'typescript', 'javascriptreact', 'typescriptreact' },
+	root_markers = { '.git', 'package.json' },
 })
 
 -- HTML
 vim.lsp.config('html', {
-    filetypes = { 'html' },
-    root_markers = { '.git', 'package.json' },
+	filetypes = { 'html' },
+	root_markers = { '.git', 'package.json' },
 })
 
 -- CSS
 vim.lsp.config('cssls', {
-    filetypes = { 'css', 'scss' },
-    root_markers = { '.git', 'package.json' },
+	filetypes = { 'css', 'scss' },
+	root_markers = { '.git', 'package.json' },
 })
 
-vim.lsp.enable({ 'lua_ls', 'clangd', 'ts_ls', 'html', 'cssls' })
+vim.lsp.enable({ 'lua_ls', 'clangd', 'pyright', 'ts_ls', 'html', 'cssls' })
