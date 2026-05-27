@@ -5,7 +5,8 @@ return { -- Parser
 	build = ":TSUpdate",
 	config = function()
 		require("nvim-treesitter.configs").setup({
-			ensure_installed = {"lua", "python", "cpp", "c"},
+			ensure_installed = {"lua", "c", "cpp", "python",
+				"javascript", "typescript", "tsx", "html", "css" },
 			highlight = { enable = true },
 			indent = { enable = true },
 		})
